@@ -1,1 +1,46 @@
-<!DOCTYPE html>\n<html lang="en">\n<head>\n    <meta charset="UTF-8">\n    <meta name="viewport" content="width=device-width, initial-scale=1.0">\n    <title>Okumura Bet</title>\n</head>\n<body>\n    <h1>Welcome to Okumura Bet</h1>\n    <p>Your go-to platform for gambling games.</p>\n</body>\n</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Okumura Bet Gambling Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .container {
+            text-align: center;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Okumura Bet!</h1>
+        <p>Place your bets and win big!</p>
+        <button id="betButton">Bet</button>
+        <p id="result"></p>
+    </div>
+    <script>
+        document.getElementById('betButton').addEventListener('click', function() {
+            const randomNumber = Math.random();
+            const resultText = randomNumber > 0.5 ? 'You Win!' : 'You Lose!';
+            document.getElementById('result').innerText = resultText;
+        });
+    </script>
+</body>
+</html>
